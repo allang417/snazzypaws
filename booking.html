@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Appointment | Snazzy Paws Grooming</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container header-content">
+      <h1 class="logo">Snazzy Paws Grooming</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="booking.html" class="active">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="booking-main">
+    <div class="booking-container">
+      <div class="booking-form">
+        <h2>Book a Grooming Appointment</h2>
+
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Owner Details</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required>
+          </fieldset>
+
+          <fieldset>
+            <legend>Dog Details</legend>
+            <label for="dog-name">Dog's Name</label>
+            <input type="text" id="dog-name" name="dog-name" required>
+
+            <label for="breed">Breed</label>
+            <input type="text" id="breed" name="breed" required>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" required>
+          </fieldset>
+
+          <fieldset>
+            <legend>Service Details</legend>
+            <label for="service">Choose Service</label>
+            <select id="service" name="service" required>
+              <option value="">-- Select a service --</option>
+              <option value="bath">Bath & Brush</option>
+              <option value="haircut">Haircut</option>
+              <option value="nails">Nail Trim</option>
+              <!-- Add others if needed -->
+            </select>
+
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="comments">Additional Comments</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+          </fieldset>
+
+          <div class="form-buttons">
+  <button type="submit">Submit Booking</button>
+  <a href="gift-voucher.html" class="btn gift-btn">Buy Gift Voucher</a>
+</div>
+
+        </form>
+      </div>
+
+      <div class="booking-image">
+        <img src="images/thank-you.jpg" alt="Dog holding thank you sign" />
+      </div>
+    </div>
+  </main>
+
+    <footer>
+    <P>Monday - Saturday 9am - 5pm</P>  
+    <p>&copy; 2025 Snazzy Paws Grooming</p>
+  </footer>
+
+</body>
+</html>
+
+
+
