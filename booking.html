@@ -49,8 +49,10 @@
             <label for="breed">Breed</label>
             <input type="text" id="breed" name="breed" required>
 
-            <label for="age">Age</label>
-            <input type="number" id="age" name="age" required>
+            <label for="age-years">Age (Years):</label>
+            <input type="number" id="age-years" name="age-years" min="0" value="0"> 
+            <label for="age-months">Age (Months):</label>
+            <input type="number" id="age-months" name="age-months" min="0" max="11" value="0">
           </fieldset>
 
           <fieldset>
@@ -61,14 +63,25 @@
               <option value="bath">Bath & Brush</option>
               <option value="haircut">Haircut</option>
               <option value="nails">Nail Trim</option>
-              <!-- Add others if needed -->
+              <option valu="ear cleaning">Ear Cleaning</option>
+              <option value="teeth brushing">Teeth Brushing</option>
+              <option value="deshedding">Deshedding Treatment</option>
+              <option value="flea and tick treatment">Flea and Tick Treatment</option>
+              <option value="spa Package">Spa Package</option>
+              <option value="express service">Express Service</option>
+              <option value="medicated bath">Medicated Bath</option> 
+              <option value="special breed cuts">Special Breed Cuts</option>
+              <option value="puppy package">Puppy Grooming</option>
+              <option value="senior dog package">Senior Dog Package</option>
+              <option value="full grooming package">Full Groomning Package</option>
+               <!-- Add others if needed -->
             </select>
 
             <label for="date">Preferred Date</label>
-            <input type="date" id="date" name="date" required>
+            <input type="date" id="date" name="date" required min=""2025-07-14" max="2025-01-01">
 
             <label for="comments">Additional Comments</label>
-            <textarea id="comments" name="comments" rows="4"></textarea>
+            <textarea id="comments" name="comments" rows="4" maxlength="100"></textarea>
           </fieldset>
 
           <div class="form-buttons">
