@@ -585,14 +585,6 @@ textarea {
   margin-top: 1.5rem;
 }
 
-
-Okay, I will adjust your entire media query section in `styles.css` to enhance visual appeal and ensure optimal fitting on smaller devices.
-
-This involves refining existing rules, adjusting typography and spacing more precisely for different breakpoints, and ensuring content flows naturally without horizontal scrolling.
-
-Here are the adjusted media queries for your `styles.css` file:
-
-```css
 /*
 |-------------------------------------------------------------------------------
 | RESPONSIVE DESIGN (Media Queries)
@@ -647,7 +639,7 @@ Here are the adjusted media queries for your `styles.css` file:
     font-size: 2.2rem;
     margin-bottom: 2rem;
   }
-}
+
 
 /*
   Breakpoint: max-width: 768px
@@ -817,5 +809,4 @@ Here are the adjusted media queries for your `styles.css` file:
       flex-direction: column; /* Ensure buttons stack if they don't fit horizontally */
   }
 }
-
-
+}
