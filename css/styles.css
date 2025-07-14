@@ -11,13 +11,14 @@
   box-sizing: border-box;
 }
 
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   background-color: #f0f8ff;
   color: #333;
   padding: 0;
+  scroll-behavior: smooth;  
+  text-rendering: optimizeLegibility;  
 }
 
 img {
@@ -72,12 +73,14 @@ header {
   padding: 2rem;
   background-color: #87ceeb;
   border-bottom: 4px solid #1e90ff;
+  position: relative; 
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%; 
 }
 
 .logo {
@@ -105,6 +108,23 @@ nav ul {
 .nav-links a:hover {
   border-bottom: 2px solid #1e90ff;
   background-color: #add8e6;
+}
+
+.hamburger-menu {
+    display: none; 
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #0a2d5e;
+    margin: 6px 0;
+    border-radius: 2px;
 }
 
 
@@ -233,12 +253,10 @@ main {
 
 .services-overview-split .services-text {
   flex: 0.5;
-  min-width: 300px;
 }
 
 .services-overview-split .services-image {
   flex: 0.25;
-  min-width: 400px;
 }
 
 .services-overview-split img {
@@ -593,23 +611,19 @@ textarea {
 
 /*
   Breakpoint: max-width: 900px
-  Applies to: Larger mobile devices (landscape), tablets (portrait), small desktops.
-  Purpose: Stack major content sections vertically, optimize general spacing.
 */
 @media (max-width: 900px) {
-  /* Major content sections that were originally side-by-side on desktop */
   .hero,
   .testimonial-video,
   .services-overview-split,
   .booking-container,
   .contact-layout {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center stacked items horizontally */
-    padding: 1.5rem; /* Adjust padding for a slightly more compact layout */
-    gap: 1.5rem; /* Reduce gap between stacked sections */
+    flex-direction: column; 
+    align-items: center; 
+    padding: 1.5rem; 
+    gap: 1.5rem; 
   }
 
-  /* Specific flexible items within these stacked sections */
   .hero-image,
   .services-overview-split .services-image,
   .booking-image,
@@ -618,118 +632,101 @@ textarea {
   .testimonial,
   .video,
   .booking-form {
-    flex: 1 1 100%; /* Make these take full available width when stacked */
-    max-width: 95%; /* Limit maximum width slightly for internal spacing */
-    padding: 1rem; /* Adjust internal padding */
+    flex: 1 1 100%; 
+    max-width: 95%; 
+    padding: 1rem; 
   }
 
-  /* Adjust spacing for call-to-action buttons */
-  .index-cta-buttons {
-    gap: 1.5rem; /* Reduce the large gap between buttons */
+ .index-cta-buttons {
+    gap: 1.5rem; 
   }
 
-  /* Ensure booking image height adapts without being too tall */
   .booking-image img {
     height: auto;
-    max-height: 400px; /* Limit height for mobile screens */
+    max-height: 400px; 
   }
 
-  /* Adjusting global H1 size for better fit on medium screens */
   h1 {
     font-size: 2.2rem;
     margin-bottom: 2rem;
   }
-
+}
 
 /*
   Breakpoint: max-width: 768px
-  Applies to: Most smartphones (portrait/landscape), very small tablets.
-  Purpose: Further optimize elements for smaller screens, stack navigation, transform tables.
 */
 @media (max-width: 768px) {
-  /* Adjustments to the Header and Navigation */
   header {
-    padding: 1rem; /* More compact header padding */
-    flex-wrap: wrap; /* Allow header content to wrap if needed */
-    justify-content: center; /* Center items in header if they wrap */
+    padding: 1rem; 
+    flex-wrap: wrap; 
+    justify-content: center; 
   }
 
   .header-content {
-      flex-direction: column; /* Stack logo and nav vertically */
-      align-items: center; /* Center them horizontally */
-      width: 100%; /* Ensure it takes full width for stacking */
+      flex-direction: column; 
+      align-items: center; 
+      width: 100%; 
   }
 
   .logo {
-      font-size: 1.5rem; /* Smaller logo font size */
-      margin-bottom: 0.5rem; /* Space below logo when stacked */
+      font-size: 1.5rem; 
+      margin-bottom: 0.5rem; 
   }
 
-  /* Main navigation links */
   .main-nav .nav-links {
-    flex-direction: column; /* Stack navigation links vertically */
-    gap: 0.5rem; /* Reduce gap between stacked links for compactness */
-    align-items: center; /* Center individual nav links */
-    width: 100%; /* Ensure the nav list takes full width */
+    flex-direction: column; 
+    gap: 0.5rem; 
+    align-items: center; 
+    width: 100%; 
   }
   
-  /* Hide the desktop navigation links and show hamburger icon on smaller devices */
+ 
   .main-nav {
-      display: none; /* Hide the entire main navigation for mobile view */
+      display: none;
   }
   .hamburger-menu {
-      display: block; /* Show the hamburger button */
-      position: absolute; /* Position it precisely */
+      display: block;
+      position: absolute; 
       top: 1rem;
       right: 1rem;
-      z-index: 1000; /* Ensure it's above other elements */
+      z-index: 1000;
   }
-  /* Ensure header has space for the absolute hamburger */
+  
   header {
-      position: relative; /* Context for absolute positioning */
-      padding-top: 3rem; /* Add space for hamburger at the top */
-      padding-bottom: 1rem; /* Ensure consistent bottom padding */
+      position: relative; 
+      padding-top: 3rem;
+      padding-bottom: 1rem; 
   }
 
-
-  /* Gallery Grid Specifics */
   .gallery-grid {
-    grid-template-columns: 1fr; /* Force to a single column on small phones */
-    gap: 1rem; /* Smaller gap between gallery items */
+    grid-template-columns: 1fr; 
+    gap: 1rem;
   }
   .gallery-item img {
-    height: 200px; /* Adjust gallery image height for single column mobile view */
+    height: 200px; 
   }
 
-  /* Table Responsiveness for Services Page */
   .services-table,
   .services-table thead,
   .services-table tbody,
   .services-table th,
   .services-table td,
   .services-table tr {
-    display: block; /* Make table elements behave like blocks to allow stacking */
+    display: block; 
   }
   thead {
-    display: none; /* Hide original table headers */
+    display: none; 
   }
   .services-table tr {
-    margin-bottom: 1rem; /* Space between each stacked 'card' */
+    margin-bottom: 1rem; 
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #e0f2ff; /* Card-like background for rows */
+    background-color: #e0f2ff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    padding: 10px; /* Internal padding for the 'card' */
-  }
-  .services-table td {
-    border: none; /* Remove internal cell borders within the card */
-    position: relative;
-    padding-left: 50%; /* Make space for the data-label */
-    text-align: right; /* Align content to the right */
-    padding-right: 10px;
+    padding: 10px; 
   }
   .services-table td:before {
-    content: attr(data-label); /* Use data-label attribute for the label */
+    content: attr(data-label); 
     position: absolute;
     left: 10px;
     width: 45%;
@@ -747,52 +744,47 @@ textarea {
     padding-bottom: 15px;
   }
   .services-table td:last-child:before {
-    content: ""; /* No label for the last column (button) */
+    content: ""; 
   }
 
-  /* General Typography Adjustments for Smaller Phones */
   .hero h1,
   .services-section h1,
   .gallery-section h1,
   .contact-page h1,
   .booking-form h2 {
-    font-size: 2rem; /* Ensure headings are still large but fit */
+    font-size: 2rem; 
     margin-bottom: 1.5rem;
   }
 
   .hero p,
   .business-hours p,
   .gallery-section p {
-    font-size: 1rem; /* Standard readable paragraph size */
+    font-size: 1rem; 
   }
 }
 
 /*
   Breakpoint: max-width: 550px
-  Applies to: Very small smartphones.
-  Purpose: Implement compact header/nav stacking for smallest screens.
 */
 @media (max-width: 550px) {
-  /* Header specific stacking for smallest screens */
-  header .header-content {
-      flex-direction: column; /* Stack logo and hamburger/nav */
-      align-items: center; /* Center them */
-      gap: 0.5rem; /* Closer gap for smallest screens */
+ header .header-content {
+      flex-direction: column; 
+      align-items: center; 
+      gap: 0.5rem; 
   }
 
   .logo {
-      font-size: 1.4rem; /* Even smaller logo for very compact screens */
-      margin-bottom: 0.5rem; /* Less space below logo */
+      font-size: 1.4rem; 
+      margin-bottom: 0.5rem;
   }
 
   .hamburger-menu {
-      top: 0.5rem; /* Move hamburger closer to top edge */
-      right: 0.5rem; /* Move hamburger closer to right edge */
+      top: 0.5rem; 
+      right: 0.5rem; 
   }
 
-  /* Fine-tune padding on main sections for very small devices */
   main {
-      padding: 0.5rem; /* Ensure minimal padding */
+      padding: 0.5rem; 
   }
 
   .hero,
@@ -800,13 +792,11 @@ textarea {
   .services-overview-split,
   .booking-container,
   .contact-layout {
-      padding: 1rem; /* Adjust padding for very compact layouts */
+      padding: 1rem; 
   }
 
-  /* Adjust CTA buttons for very small screens if they still overflow */
   .index-cta-buttons {
-      gap: 0.5rem; /* Very small gap */
-      flex-direction: column; /* Ensure buttons stack if they don't fit horizontally */
+      gap: 0.5rem;
+      flex-direction: column; 
   }
-}
 }
