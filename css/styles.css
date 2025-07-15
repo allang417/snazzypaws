@@ -654,17 +654,15 @@ margin-bottom: 2rem;
 /*
   Breakpoint: max-width: 768px
 */
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
   header {
     padding: 1rem;
     flex-wrap: wrap;
     justify-content: center;
-    position: static; 
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    min-width: 0;       
   }
 
-  .header-content { 
+  .header-content {
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -677,10 +675,18 @@ margin-bottom: 2rem;
   }
 
   .main-nav .nav-links {
-    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;    
     gap: 0.5rem;
-    align-items: center;
+    justify-content: center;
     width: 100%;
+  }
+
+  .nav-links a {
+    flex-shrink: 0;
+    padding: 6px 10px;
+    font-size: 0.95rem;
+    white-space: nowrap; 
   }
 
   /* Gallery Grid Specifics */
