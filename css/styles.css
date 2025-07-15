@@ -6,9 +6,9 @@
 
 /* ===== RESET & BASE STYLES ===== */
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+ padding: 0;
+ box-sizing: border-box;
 }
 
 body {
@@ -17,8 +17,8 @@ body {
  background-color: #f0f8ff;
  color: #333;
  padding: 0;
- scroll-behavior: smooth;  
- text-rendering: optimizeLegibility;  
+ scroll-behavior: smooth;
+ text-rendering: optimizeLegibility;
 }
 
 img {
@@ -79,7 +79,7 @@ header {
  display: flex;
  justify-content: space-between;
  align-items: center;
- width: 100%; 
+ width: 100%;
 }
 
 .logo {
@@ -256,7 +256,6 @@ main {
 
 .services-overview-split .services-image {
  flex: 0.25;
- /* min-width: 400px; - Removed this line */
 }
 
 .services-overview-split img {
@@ -618,10 +617,10 @@ textarea {
  .services-overview-split,
  .booking-container,
  .contact-layout {
-   flex-direction: column;  
- align-items: center;  
- padding: 1.5rem;  
- gap: 1.5rem;  
+ flex-direction: column;
+ align-items: center;
+ padding: 1.5rem;
+ gap: 1.5rem;
 }
 
  .hero-image,
@@ -631,22 +630,22 @@ textarea {
  .contact-form,
  .testimonial,
  .video,
-.booking-form {
- flex: 1 1 100%;  
- max-width: 95%;  
- padding: 1rem;  
+ .booking-form {
+ flex: 1 1 100%;
+ max-width: 95%;
+ padding: 1rem;
 }
 
-.index-cta-buttons {
- gap: 1.5rem; 
+ .index-cta-buttons {
+ gap: 1.5rem;
 }
 
-.booking-image img {
+ .booking-image img {
  height: auto;
- max-height: 400px; 
+ max-height: 400px;
 }
 
-h1 {
+ h1 {
  font-size: 2.2rem;
  margin-bottom: 2rem;
 }
@@ -656,76 +655,65 @@ h1 {
   Breakpoint: max-width: 768px
 */
 @media (max-width: 768px) {
- header {
- padding: 1rem;  
- flex-wrap: wrap;  
- justify-content: center;  
+header {
+ padding: 1rem;
+ flex-wrap: wrap;
+ justify-content: center;
 }
 
 .header-content {
- flex-direction: column;  
- align-items: center;  
- width: 100%;  
+ flex-direction: column;
+ align-items: center;
+ width: 100%;
 }
 
 .logo {
- font-size: 1.5rem;  
- margin-bottom: 0.5rem;  
+ font-size: 1.5rem;
+ margin-bottom: 0.5rem;
 }
 
-.main-nav .nav-links {
- flex-direction: column;  
- gap: 0.5rem;  
- align-items: center;  
- width: 100%;  
+ .main-nav .nav-links {
+ flex-direction: column;
+ gap: 0.5rem;
+ align-items: center;
+ width: 100%;
 }
 
-.main-nav {
- display: none;  
+ header {
+ position: static; 
+ padding-top: 1rem; 
+ padding-bottom: 1rem;
+
+
+ .gallery-grid {
+ grid-template-columns: 1fr;
+ gap: 1rem;
 }
-.hamburger-menu {
- display: block;  
- position: absolute;  
- top: 1rem;
- right: 1rem;
- z-index: 1000;  
-}
-  
-header {
- position: relative;  
- padding-top: 3rem;  
- padding-bottom: 1rem;  
+ .gallery-item img {
+ height: 200px;
 }
 
-.gallery-grid {
- grid-template-columns: 1fr;  
- gap: 1rem;  
+ .services-table,
+ .services-table thead,
+ .services-table tbody,
+ .services-table th,
+ .services-table td,
+ .services-table tr {
+ display: block;
 }
-.gallery-item img {
- height: 200px;  
+ thead {
+ display: none;
 }
-
-.services-table,
-.services-table thead,
-.services-table tbody,
-.services-table th,
-.services-table td,
-.services-table tr {
- display: block;  
-}
-thead {
- display: none;  
-}
-services-table tr {
- margin-bottom: 1rem;  
+ .services-table tr {
+ margin-bottom: 1rem;
  border: 1px solid #ddd;
  border-radius: 8px;
  background-color: #e0f2ff;
  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
- padding: 10px; 
+ padding: 10px;
 }
-.services-table td:before {
- content: attr(data-label); 
+ .services-table td:before {
+ content: attr(data-label);
  position: absolute;
  left: 10px;
  width: 45%;
@@ -734,7 +722,7 @@ services-table tr {
  font-weight: bold;
  color: #0a2d5e;
 }
-.services-table td:last-child {
+ .services-table td:last-child {
  text-align: center;
  padding-left: 10px;
  background-color: transparent;
@@ -742,60 +730,56 @@ services-table tr {
  padding-top: 15px;
  padding-bottom: 15px;
 }
-.services-table td:last-child:before {
- content: ""; 
+ .services-table td:last-child:before {
+ content: "";
 }
 
-.hero h1,
-.services-section h1,
-.gallery-section h1,
-.contact-page h1,
-.booking-form h2 {
- font-size: 2rem; 
+ .hero h1,
+ .services-section h1,
+ .gallery-section h1,
+ .contact-page h1,
+ .booking-form h2 {
+ font-size: 2rem;
  margin-bottom: 1.5rem;
 }
 
-.hero p,
-.business-hours p,
-.gallery-section p {
- font-size: 1rem; 
+ .hero p,
+ .business-hours p,
+ .gallery-section p {
+ font-size: 1rem;
 }
+ }
 }
 
 /*
   Breakpoint: max-width: 550px
 */
 @media (max-width: 550px) {
-header .header-content {
- flex-direction: column; 
- align-items: center; 
- gap: 0.5rem; 
-}
-
-.logo {
- font-size: 1.4rem; 
- margin-bottom: 0.5rem;
-}
-
-.hamburger-menu {
- top: 0.5rem; 
- right: 0.5rem; 
-}
-
-main {
- padding: 0.5rem; 
-}
-
-.hero,
-.testimonial-video,
-.services-overview-split,
-.booking-container,
-.contact-layout {
- padding: 1rem; 
-}
-
-.index-cta-buttons {
+ header .header-content {
+ flex-direction: column;
+ align-items: center;
  gap: 0.5rem;
- flex-direction: column; 
+}
+
+ .logo {
+ font-size: 1.4rem;
+margin-bottom: 0.5rem;
+}
+
+ main {
+ padding: 0.5rem;
+}
+
+ .hero,
+ .testimonial-video,
+ .services-overview-split,
+ .booking-container,
+ .contact-layout {
+ padding: 1rem;
+}
+
+ .index-cta-buttons {
+ gap: 0.5rem;
+ flex-direction: column;
 }
 }
