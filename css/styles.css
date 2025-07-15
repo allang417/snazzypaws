@@ -656,10 +656,9 @@ margin-bottom: 2rem;
 */
 @media (max-width: 768px) {
   header {
-    padding: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    min-width: 0;       
+    width: 100%;
+    min-width: 0;
+    overflow: visible;       
   }
 
   .header-content {
@@ -677,16 +676,14 @@ margin-bottom: 2rem;
   .main-nav .nav-links {
     display: flex;
     flex-wrap: wrap;    
-    gap: 0.5rem;
     justify-content: center;
     width: 100%;
   }
 
   .nav-links a {
     flex-shrink: 0;
-    padding: 6px 10px;
-    font-size: 0.95rem;
     white-space: nowrap; 
+    margin: 4px 6px;  
   }
 
   /* Gallery Grid Specifics */
