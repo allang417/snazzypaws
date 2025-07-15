@@ -755,31 +755,45 @@ header {
   Breakpoint: max-width: 550px
 */
 @media (max-width: 550px) {
- header .header-content {
- flex-direction: column;
- align-items: center;
- gap: 0.5rem;
+header .header-content {
+flex-direction: column;
+align-items: center;
+gap: 0.2rem; 
 }
 
- .logo {
- font-size: 1.4rem;
-margin-bottom: 0.5rem;
+.logo {
+font-size: 1.2rem;
+margin-bottom: 0.2rem; 
 }
 
- main {
- padding: 0.5rem;
+header {
+    padding: 0.75rem 0.5rem;
 }
 
- .hero,
- .testimonial-video,
- .services-overview-split,
- .booking-container,
- .contact-layout {
- padding: 1rem;
+.main-nav .nav-links {
+    gap: 0.2rem; 
 }
 
- .index-cta-buttons {
- gap: 0.5rem;
- flex-direction: column;
+.nav-links a {
+    padding: 5px 8px; 
+    font-size: 0.9rem; 
+    white-space: nowrap; 
+}
+
+main {
+padding: 0.5rem; 
+}
+
+.hero,
+.testimonial-video,
+.services-overview-split,
+.booking-container,
+.contact-layout {
+padding: 1rem;
+}
+
+.index-cta-buttons {
+gap: 0.5rem;
+flex-direction: column;
 }
 }
