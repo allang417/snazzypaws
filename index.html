@@ -1,116 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta tags for character set and responsive design -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Meta tag for search engine description -->
+  <meta name="description" content="Welcome to Snazzy Paws Grooming, offering professional dog grooming with a personal touch in Hamilton, NZ.">
+
   <title>Snazzy Paws Grooming</title>
-  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Bootstrap CSS from CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <!-- Custom CSS with relative path -->
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- HEADER & NAVIGATION -->
   <header>
-    <div class="container header-content">
-      <div class="logo">Snazzy Paws Grooming</div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="booking.html">Booking</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info-subtle">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="./index.html">Snazzy Paws Grooming</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="./index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="./booking.html">Booking</a></li>
+            <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="./roster.html">Staff Roster</a></li>
+            <li class="nav-item"><a class="nav-link" href="./privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
   <!-- MAIN CONTENT -->
   <main>
-
     <!-- HERO SECTION -->
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Welcome to Snazzy Paws!</h1>
-        <p>Professional dog grooming with a personal touch 🐾</p>
-        <p>
-          At Snazzy Paws Grooming, we believe every dog deserves to look and feel their best.
-          Our friendly, experienced groomers provide gentle care in a calm, clean environment
-          whether it's a quick tidy up or a full spa experience.
-        </p>
-        <p>
-          Based in Hamilton NZ, we're proud to serve the community with grooming services
-          that combine expertise, love, and lots of tail wags.
-        </p>
-      </div>
-      <div class="hero-image">
-        <img src="images/dog-in-tub.jpg" alt="Happy dog in tub">
+    <section class="container my-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="display-4">Welcome to Snazzy Paws!</h1>
+          <p class="lead">Professional dog grooming with a personal touch 🐾</p>
+          <p>At Snazzy Paws Grooming, we believe every dog deserves to look and feel their best. Our friendly, experienced groomers provide gentle care in a calm, clean environment whether it's a quick tidy up or a full spa experience.</p>
+          <p>Based in Hamilton NZ, we're proud to serve the community with grooming services that combine expertise, love, and lots of tail wags.</p>
+        </div>
+        <div class="col-lg-6 mt-4 mt-lg-0">
+          <img src="./images/dog-in-tub.jpg" alt="Happy dog in a tub" class="img-fluid rounded shadow">
+        </div>
       </div>
     </section>
 
     <!-- BUSINESS HOURS -->
-  <section class="business-hours">
-  <div class="hours-container">
-    <h2><span class="emoji"></span> Business Hours</h2>
-    <p>Monday - Saturday: <strong>9 AM - 5 PM</strong></p>
-  </div>
-</section>
-
+    <section class="bg-light py-5">
+        <div class="container text-center">
+            <h2>Business Hours</h2>
+            <p class="lead">Monday - Saturday: <strong>9 AM - 5 PM</strong></p>
+        </div>
+    </section>
 
     <!-- SERVICES OVERVIEW -->
-    <section class="services-overview-split">
-      <div class="services-image">
-        <img src="images/dog-our-services.jpg" alt="Dog grooming services">
-      </div>
-      <div class="services-text">
-        <h2>We offer a full service dog grooming that pampers your most loved pooch</h2>
-        <p></p>
-      </div>
+    <section class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-md-5">
+                <img src="./images/dog-our-services.jpg" alt="Dog being pampered during grooming" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-7 mt-4 mt-md-0">
+                <h2>We Pamper Your Pooch</h2>
+                <p class="lead">We offer a full range of dog grooming services to pamper your most loved companion. From a simple bath and brush to breed specific cuts and luxurious spa packages, we have everything to make your dog look and feel snazzy.</p>
+            </div>
+        </div>
     </section>
 
     <!-- CTA BUTTONS -->
-<section class="index-cta-buttons">
-  <h2 class="visually-hidden">Quick Actions</h2> <a href="services.html" class="btn">View Services</a>
-  <a href="booking.html" class="btn">Book Now</a>
-  <a href="gallery.html" class="btn">View Gallery</a>
-</section>
-
-    <!-- TESTIMONIALS & VIDEO -->
-    <section class="testimonial-video">
-      <div class="testimonial">
-        <h2>What Our Clients Say</h2>
-        <blockquote>
-          "Snazzy Paws always makes my dog look amazing!" - A Happy Customer
-        </blockquote>
-        <blockquote>
-          "The team is so caring and gentle with my pup. Highly recommend!" - Another Happy Customer
-        </blockquote>
-        <blockquote>
-          "Snazzy Paws is the best! My dog loves going there and always comes home looking fabulous!" - A Loyal Client
-        </blockquote>
-        <blockquote>
-          "The staff at Snazzy Paws are so friendly and professional. They treat my dog like their own!" - A Satisfied Customer
-        </blockquote> 
-        <blockquote>
-          "Snazzy Paws is the only place I trust with my dog's grooming. They always do a fantastic job!" - A Loyal Client
-        </blockquote> 
-        <blockquote> 
-          "I love how Snazzy Paws takes the time to understand my dog's needs. They always go above and beyond!" - A Happy Customer   
-        </blockquote>
-      </div>
-
-      <div class="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/-KBEQ6f6b9Y?si=Er24nDwiU4EX4mxJ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
+    <section class="container text-center my-5">
+      <h2 class="visually-hidden">Quick Actions</h2>
+      <a href="./services.html" class="btn btn-primary btn-lg mx-2 my-2">View Services</a>
+      <a href="booking.html" class="btn btn-primary btn-lg mx-2">Book Now</a>
+      <a href="./gallery.html" class="btn btn-primary btn-lg mx-2 my-2">View Gallery</a>
     </section>
 
+    <!-- TESTIMONIALS & VIDEO -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-lg-7">
+                <h2>What Our Clients Say</h2>
+                <figure class="mb-4"><blockquote class="blockquote"><p>"Snazzy Paws always makes my dog look amazing!"</p></blockquote><figcaption class="blockquote-footer">A Happy Customer</figcaption></figure>
+                <figure class="mb-4"><blockquote class="blockquote"><p>"The team is so caring and gentle with my pup. Highly recommend!"</p></blockquote><figcaption class="blockquote-footer">Another Happy Customer</figcaption></figure>
+                <figure class="mb-4"><blockquote class="blockquote"><p>"Snazzy Paws is the best! My dog loves going there and always comes home looking fabulous!"</p></blockquote><figcaption class="blockquote-footer">A Loyal Client</figcaption></figure>
+                <figure class="mb-4"><blockquote class="blockquote"><p>"The staff at Snazzy Paws are so friendly and professional. They treat my dog like their own!"</p></blockquote><figcaption class="blockquote-footer">A Satisfied Customer</figcaption></figure>
+                <figure class="mb-4"><blockquote class="blockquote"><p>"Snazzy Paws is the only place I trust with my dog's grooming. They always do a fantastic job!"</p></blockquote><figcaption class="blockquote-footer">A Loyal Client</figcaption></figure>
+                <figure class="mb-4"><blockquote class="blockquote"><p>"I love how Snazzy Paws takes the time to understand my dog's needs. They always go above and beyond!"</p></blockquote><figcaption class="blockquote-footer">A Happy Customer</figcaption></figure>
+            </div>
+            <div class="col-lg-5 mt-4 mt-lg-0">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/-KBEQ6f6b9Y?si=Er24nDwiU4EX4mxJ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
-  <footer>
-    <P>Monday - Saturday 9am - 5pm</P>
-    <p>&copy; 2025 Snazzy Paws Grooming</p>
+  <footer class="bg-info-subtle text-dark text-center py-4 mt-auto">
+    <div class="container">
+      <p class="mb-1">Monday - Saturday 9am - 5pm</p>
+      <p class="mb-0">&copy; 2025 Snazzy Paws Grooming</p>
+    </div>
   </footer>
 
+  <!-- Bootstrap JS Bundle (includes Popper) from CDN (integrity attribute corrected) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
 

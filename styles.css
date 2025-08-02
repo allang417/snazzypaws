@@ -1,0 +1,24 @@
+/* Custom Stylesheet for Snazzy Paws Grooming
+   Most layout and component styling is now handled by Bootstrap classes in the HTML.
+*/
+
+/* Body and General Typography */
+body {
+  /* Sets a default background color for the entire page */
+  background-color: #f8f9fa; 
+  /* Ensures the footer stays at the bottom on short pages */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Custom styling for the gallery cards to ensure images are a consistent height */
+.card-img-top {
+  height: 250px;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Making the main content area grow to push the footer down */
+main {
+    flex: 1;
+}

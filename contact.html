@@ -1,73 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Snazzy Paws Grooming</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <!-- Meta tags for character set and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta tag for search engine description -->
+    <meta name="description" content="Contact Snazzy Paws Grooming. Find our location in Hamilton, NZ, phone number, and email, or send us a message through our contact form.">
+
+    <title>Contact | Snazzy Paws Grooming</title>
+
+    <!-- Bootstrap CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Custom CSS with relative path -->
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- HEADER & NAVIGATION -->
   <header>
-    <div class="container header-content">
-      <div class="logo">Snazzy Paws Grooming</div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="booking.html">Booking</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info-subtle">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="./index.html">Snazzy Paws Grooming</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="./booking.html">Booking</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="./contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="./roster.html">Staff Roster</a></li>
+            <li class="nav-item"><a class="nav-link" href="./privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <!-- CONTACT SECTION -->
-  <main>
-    <section class="contact-page">
-      <h1>Contact Us</h1>
-      
-      <div class="contact-layout">
-        <!-- Map -->
-        <div class="map-container">
-          <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.9531771935196!2d175.2748477156626!3d-37.7870019797584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d6d188f3c72e58d%3A0x500ef6143a2fd70!2sHamilton%2C%20New%20Zealand!5e0!3m2!1sen!2snz!4v1625140705530"
-          height="300" style="border:0;" allowfullscreen=""
-          loading="lazy" title="Snazzy Paws Location">
-          </iframe>
-          <p><strong>Find Us:</strong> Hamilton, NZ</p>
-          <p><strong>Phone:</strong> (07) 123 4567</p>
-          <p><strong>Email:</strong> hello@snazzypaws.co.nz</p>
+  <!-- MAIN CONTACT CONTENT -->
+  <main class="container my-5">
+    <h1 class="text-center mb-5">Contact Us</h1>
+    
+    <div class="row g-5">
+      <!-- Map and Details Column -->
+      <div class="col-lg-6">
+        <h3>Our Location</h3>
+        <!-- Responsive map embed -->
+        <div class="ratio ratio-4x3 mb-3">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.9531771935196!2d175.2748477156626!3d-37.7870019797584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d6d188f3c72e58d%3A0x500ef6143a2fd70!2sHamilton%2C%20New%20Zealand!5e0!3m2!1sen!2snz!4v1625140705530" style="border:0;" allowfullscreen="" loading="lazy" title="Snazzy Paws Location"></iframe>
         </div>
+        <p><strong>Find Us:</strong> Hamilton, NZ</p>
+        <p><strong>Phone:</strong> (07) 123 4567</p>
+        <p><strong>Email:</strong> hello@snazzypaws.co.nz</p>
+      </div>
 
-        <!-- Form -->
-        <form class="contact-form" action="#" method="post">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-
-          <label for="phone">Phone:</label>
-          <input type="tel" id="phone" name="phone" required>
-
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-
-          <button type="submit">Send Message</button>
+      <!-- Contact Form Column -->
+      <div class="col-lg-6">
+        <h3>Send Us a Message</h3>
+        <form action="#" method="post" class="p-4 border rounded bg-light">
+          <div class="mb-3"><label for="name" class="form-label">Name:</label><input type="text" id="name" name="name" class="form-control" required></div>
+          <div class="mb-3"><label for="email" class="form-label">Email:</label><input type="email" id="email" name="email" class="form-control" required></div>
+          <div class="mb-3"><label for="phone" class="form-label">Phone:</label><input type="tel" id="phone" name="phone" class="form-control" required></div>
+          <div class="mb-3"><label for="message" class="form-label">Message:</label><textarea id="message" name="message" rows="5" class="form-control" required></textarea></div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
       </div>
-    </section>
+    </div>
   </main>
 
   <!-- FOOTER -->
-  <footer>
-    <P>Monday - Saturday 9am - 5pm</P>
-    <p>&copy; 2025 Snazzy Paws Grooming</p>
+  <footer class="bg-info-subtle text-dark text-center py-4 mt-auto">
+    <div class="container">
+      <p class="mb-1">Monday - Saturday 9am - 5pm</p>
+      <p class="mb-0">&copy; 2025 Snazzy Paws Grooming</p>
+    </div>
   </footer>
 
+  <!-- Bootstrap JS Bundle from CDN (integrity attribute corrected) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
 

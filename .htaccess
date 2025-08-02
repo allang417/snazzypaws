@@ -1,0 +1,17 @@
+# This file restricts access to the directory it is placed in.
+# It requires a user to enter a valid username and password.
+
+# Sets the authentication type to Basic.
+AuthType Basic
+
+# This is the message that will appear in the password prompt dialog.
+AuthName "Restricted Staff Area"
+
+# This specifies the full server path to the password file.
+# IMPORTANT: You MUST replace "/full/path/to/your/website/.htpasswd"
+# with the actual absolute path on your web server.
+# For security, this file should be stored outside the public web root.
+AuthUserFile "/full/path/to/your/website/.htpasswd"
+
+# This requires a valid user from the .htpasswd file to grant access.
+Require valid user
