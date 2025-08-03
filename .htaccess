@@ -14,4 +14,4 @@ AuthName "Restricted Staff Area"
 AuthUserFile "/full/path/to/your/website/.htpasswd"
 
 # This requires a valid user from the .htpasswd file to grant access.
-Require valid user
+Require valid-user
